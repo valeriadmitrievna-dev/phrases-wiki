@@ -11,6 +11,17 @@
   <body>
     <header>
       <div class="container">
+        <div id="burger">
+          <span></span>
+        </div>
+        <div id="burger_body">
+          <div class="close">
+            <img src="../../assets/close.svg" alt="close" />
+          </div>
+          <nav>
+            <a href="#">Catalog</a>
+          </nav>
+        </div>
         <div id="logo">
           <img src="../../assets/logo.svg" alt="" />
           <div>
@@ -27,15 +38,20 @@
             <span>English</span>
             <img class="arrow" src="../../assets/arrow.svg" />
           </div>
-          <ul id="lang_body">
-            <li class="active">English</li>
-            <li>Русский</li>
-            <li>Español</li>
-            <li>Deutsch</li>
-            <li>Italiano</li>
-            <li>Français</li>
-            <li>Portuguese</li>
-          </ul>
+          <div id="lang_body">
+            <div class="close">
+              <img src="../../assets/close.svg" alt="close" />
+            </div>
+            <ul>
+              <li class="active">English</li>
+              <li>Русский</li>
+              <li>Español</li>
+              <li>Deutsch</li>
+              <li>Italiano</li>
+              <li>Français</li>
+              <li>Portuguese</li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -177,7 +193,7 @@
       </section>
       <section class="posts">
         <div class="container">
-          <h2 class="dark">New</h2>
+          <h2>New</h2>
           <div class="postsGrid">
             <div href="#" class="post">
               <div class="cover">
@@ -235,7 +251,7 @@
       </section>
       <section class="posts">
         <div class="container">
-          <h2 class="dark">Featured</h2>
+          <h2>Featured</h2>
           <div class="postsGrid">
             <div href="#" class="post">
               <div class="cover">
@@ -302,7 +318,9 @@
           </div>
         </div>
         <nav>
-          <a target="_blank" href="https://japaneseemoticons.org">japaneseemoticons.org</a>
+          <a target="_blank" href="https://japaneseemoticons.org"
+            >japaneseemoticons.org</a
+          >
           <a target="_blank" href="https://phrases.wiki">phrases.wiki</a>
           <a target="_blank" href="https://stickers.wiki">stickers.wiki</a>
         </nav>
