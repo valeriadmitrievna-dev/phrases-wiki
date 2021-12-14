@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("./futura/stylesheet.css");
+
+$textColor: #2c3341;
+$purpur: #5c44ca;
+$greyText: #afb7c5;
+
+$screen-width: 1440;
+@function px-to-vw($value) {
+  @return $value * 100 / $screen-width + vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: $textColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.container {
+  width: 91.6%;
+  margin: 0 auto;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: px-to-vw(5);
+  p {
+    font-family: "FuturaMediumC";
+    color: #fff;
+  }
+}
+
+// header
+
+header {
+  background: $purpur;
+  padding: px-to-vw(10) 0;
+  background-image: url("./assets/headerpart-1.svg"),
+    url("./assets/headerpart-3.svg"), url("./assets/headerpart-4.svg"),
+    url("./assets/headerpart-2.svg");
+  background-repeat: no-repeat;
+  background-size: auto px-to-vw(100);
+  background-position: 0 center, px-to-vw(100) center, px-to-vw(45) center,
+    px-to-vw(400) center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: px-to-vw(40);
+    .left {
+      margin-right: auto;
+    }
+    .right {
+      margin-left: auto;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: px-to-vw(32);
+      a {
+        color: #fff;
+        font-weight: 600;
+        font-size: px-to-vw(16);
+        line-height: 150%;
+      }
+    }
+    #language {
+      position: relative;
+      user-select: none;
+      #lang_label {
+        background-color: #fff;
+        border-radius: px-to-vw(32);
+        padding: px-to-vw(15) px-to-vw(24);
+        display: flex;
+        align-items: center;
+        gap: px-to-vw(15);
+        cursor: pointer;
+        span {
+          font-size: px-to-vw(16);
+          line-height: 162%;
+        }
+        img {
+          width: px-to-vw(20);
+          height: px-to-vw(20);
+        }
+        .arrow {
+          width: px-to-vw(15);
+          height: px-to-vw(10);
+          margin-left: px-to-vw(20);
+        }
+      }
+      #lang_body {
+        padding: px-to-vw(24);
+        position: absolute;
+        background: #ffffff;
+        border: 1px solid #f4f5f7;
+        border-radius: px-to-vw(32);
+        width: 100%;
+        left: 0;
+        margin-top: px-to-vw(8);
+        li {
+          cursor: pointer;
+          font-size: px-to-vw(16);
+          line-height: 162%;
+          &:not(:last-child) {
+            margin-bottom: px-to-vw(12);
+          }
+          &.active {
+            color: $purpur;
+          }
+        }
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(px-to-vw(-20));
+        transition: 0.3s;
+        &.visible {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
