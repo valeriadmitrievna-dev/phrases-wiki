@@ -33,6 +33,11 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .container {
   width: 91.6%;
   margin: 0 auto;
@@ -118,10 +123,26 @@ button {
   gap: 1.66667vw;
 }
 
-.tags li {
+.tags a {
   font-size: 1.11111vw;
   line-height: 162%;
   color: #5c44ca;
+}
+
+button.purple,
+a.purple {
+  background: #5c44ca;
+  border: 1px solid #5c44ca;
+  border-radius: 2.22222vw;
+  padding: 1.11111vw 2.22222vw;
+  font-weight: 600;
+  font-size: 1.11111vw;
+  line-height: 150%;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  max-width: 29.02778vw;
+  text-align: center;
 }
 
 header {
@@ -290,5 +311,85 @@ main section#intro .container p {
 
 main section#intro .container .tags {
   margin-top: 1.66667vw;
+}
+
+main section.posts {
+  margin: 5.55556vw 0;
+}
+
+main section.posts .container h2 {
+  color: #afb7c5;
+  font-weight: bold;
+  font-size: 3.88889vw;
+  line-height: 114%;
+  font-family: "FuturaMediumC";
+  margin-bottom: 2.77778vw;
+}
+
+main section.posts .container h2.dark {
+  color: #2c3341;
+}
+
+main section.posts .container .postsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.22222vw;
+}
+
+main section.posts .container .postsGrid .post {
+  cursor: pointer;
+  border-radius: 0.83333vw;
+  overflow: hidden;
+  display: block;
+}
+
+main section.posts .container .postsGrid .post .cover {
+  height: 17.01389vw;
+}
+
+main section.posts .container .postsGrid .post .cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section.posts .container .postsGrid .post .content {
+  background: #f4f5f7;
+  padding: 1.66667vw 2.22222vw;
+}
+
+main section.posts .container .postsGrid .post .content .tags {
+  gap: 1.11111vw;
+}
+
+main section.posts .container .postsGrid .post .content .tags a {
+  font-weight: 600;
+  font-size: 0.97222vw;
+  line-height: 171%;
+}
+
+main section.posts .container .postsGrid .post .content h5 {
+  font-weight: bold;
+  font-size: 1.38889vw;
+  line-height: 140%;
+  margin: 1.11111vw 0;
+  font-family: "FuturaMediumC", sans-serif;
+}
+
+main section.posts .container .postsGrid .post .content p {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1.11111vw;
+  line-height: 150%;
+}
+
+main section.posts .container .purple {
+  margin-top: 2.77778vw;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@
 $textColor: #2c3341;
 $purpur: #5c44ca;
 $greyText: #afb7c5;
+$lightGrey: #f4f5f7;
 
 $screen-width: 1440;
 @function px-to-vw($value) {
@@ -40,6 +41,11 @@ textarea {
 
 button {
   cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .container {
@@ -91,11 +97,27 @@ button {
   display: flex;
   align-items: center;
   gap: px-to-vw(24);
-  li {
+  a {
     font-size: px-to-vw(16);
     line-height: 162%;
     color: $purpur;
   }
+}
+
+button.purple,
+a.purple {
+  background: $purpur;
+  border: 1px solid $purpur;
+  border-radius: px-to-vw(32);
+  padding: px-to-vw(16) px-to-vw(32);
+  font-weight: 600;
+  font-size: px-to-vw(16);
+  line-height: 150%;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  max-width: px-to-vw(418);
+  text-align: center;
 }
 
 // header
@@ -161,7 +183,7 @@ header {
         padding: px-to-vw(24);
         position: absolute;
         background: #ffffff;
-        border: 1px solid #f4f5f7;
+        border: 1px solid $lightGrey;
         border-radius: px-to-vw(32);
         width: 100%;
         left: 0;
@@ -222,6 +244,72 @@ main {
       }
       .tags {
         margin-top: px-to-vw(24);
+      }
+    }
+  }
+  section.posts {
+    margin: px-to-vw(80) 0;
+    .container {
+      h2 {
+        color: $greyText;
+        font-weight: bold;
+        font-size: px-to-vw(56);
+        line-height: 114%;
+        font-family: "FuturaMediumC";
+        &.dark {
+          color: $textColor;
+        }
+        margin-bottom: px-to-vw(40);
+      }
+      .postsGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: px-to-vw(32);
+        .post {
+          cursor: pointer;
+          border-radius: px-to-vw(12);
+          overflow: hidden;
+          display: block;
+          .cover {
+            height: px-to-vw(245);
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .content {
+            background: $lightGrey;
+            padding: px-to-vw(24) px-to-vw(32);
+            .tags {
+              gap: px-to-vw(16);
+              a {
+                font-weight: 600;
+                font-size: px-to-vw(14);
+                line-height: 171%;
+              }
+            }
+            h5 {
+              font-weight: bold;
+              font-size: px-to-vw(20);
+              line-height: 140%;
+              margin: px-to-vw(16) 0;
+              font-family: "FuturaMediumC", sans-serif;
+            }
+            p {
+              display: -webkit-box;
+              max-width: 100%;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              font-size: px-to-vw(16);
+              line-height: 150%;
+            }
+          }
+        }
+      }
+      .purple {
+        margin-top: px-to-vw(40);
       }
     }
   }
