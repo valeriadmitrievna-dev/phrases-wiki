@@ -122,7 +122,8 @@ a.purple {
 
 // header
 
-header {
+header,
+footer {
   background: $purpur;
   padding: px-to-vw(10) 0;
   background-image: url("./assets/headerpart-1.svg"),
@@ -210,7 +211,16 @@ header {
         }
       }
     }
+    > span {
+      font-size: px-to-vw(16);
+      line-height: 162%;
+      color: #ffffff;
+    }
   }
+}
+
+footer nav a {
+  text-decoration: underline;
 }
 
 main {

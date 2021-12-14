@@ -145,7 +145,8 @@ a.purple {
   text-align: center;
 }
 
-header {
+header,
+footer {
   background: #5c44ca;
   padding: 0.69444vw 0;
   background-image: url("./assets/headerpart-1.svg"), url("./assets/headerpart-3.svg"), url("./assets/headerpart-4.svg"), url("./assets/headerpart-2.svg");
@@ -154,7 +155,8 @@ header {
   background-position: 0 center, 6.94444vw center, 3.125vw center, 27.77778vw center;
 }
 
-header .container {
+header .container,
+footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,15 +169,18 @@ header .container {
   gap: 2.77778vw;
 }
 
-header .container .left {
+header .container .left,
+footer .container .left {
   margin-right: auto;
 }
 
-header .container .right {
+header .container .right,
+footer .container .right {
   margin-left: auto;
 }
 
-header .container nav {
+header .container nav,
+footer .container nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,14 +190,16 @@ header .container nav {
   gap: 2.22222vw;
 }
 
-header .container nav a {
+header .container nav a,
+footer .container nav a {
   color: #fff;
   font-weight: 600;
   font-size: 1.11111vw;
   line-height: 150%;
 }
 
-header .container #language {
+header .container #language,
+footer .container #language {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -200,7 +207,8 @@ header .container #language {
           user-select: none;
 }
 
-header .container #language #lang_label {
+header .container #language #lang_label,
+footer .container #language #lang_label {
   background-color: #fff;
   border-radius: 2.22222vw;
   padding: 1.04167vw 1.66667vw;
@@ -214,23 +222,27 @@ header .container #language #lang_label {
   cursor: pointer;
 }
 
-header .container #language #lang_label span {
+header .container #language #lang_label span,
+footer .container #language #lang_label span {
   font-size: 1.11111vw;
   line-height: 162%;
 }
 
-header .container #language #lang_label img {
+header .container #language #lang_label img,
+footer .container #language #lang_label img {
   width: 1.38889vw;
   height: 1.38889vw;
 }
 
-header .container #language #lang_label .arrow {
+header .container #language #lang_label .arrow,
+footer .container #language #lang_label .arrow {
   width: 1.04167vw;
   height: 0.69444vw;
   margin-left: 1.38889vw;
 }
 
-header .container #language #lang_body {
+header .container #language #lang_body,
+footer .container #language #lang_body {
   padding: 1.66667vw;
   position: absolute;
   background: #ffffff;
@@ -247,25 +259,40 @@ header .container #language #lang_body {
   transition: 0.3s;
 }
 
-header .container #language #lang_body li {
+header .container #language #lang_body li,
+footer .container #language #lang_body li {
   cursor: pointer;
   font-size: 1.11111vw;
   line-height: 162%;
 }
 
-header .container #language #lang_body li:not(:last-child) {
+header .container #language #lang_body li:not(:last-child),
+footer .container #language #lang_body li:not(:last-child) {
   margin-bottom: 0.83333vw;
 }
 
-header .container #language #lang_body li.active {
+header .container #language #lang_body li.active,
+footer .container #language #lang_body li.active {
   color: #5c44ca;
 }
 
-header .container #language #lang_body.visible {
+header .container #language #lang_body.visible,
+footer .container #language #lang_body.visible {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+header .container > span,
+footer .container > span {
+  font-size: 1.11111vw;
+  line-height: 162%;
+  color: #ffffff;
+}
+
+footer nav a {
+  text-decoration: underline;
 }
 
 main section#intro {
