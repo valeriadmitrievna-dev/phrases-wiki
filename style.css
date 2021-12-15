@@ -186,10 +186,6 @@ a.purple {
   display: none;
 }
 
-.mobile {
-  display: none;
-}
-
 header,
 footer {
   background: #5c44ca;
@@ -402,6 +398,10 @@ h6 {
 
 .advertising.long {
   height: 11.11111vw;
+}
+
+.mobile {
+  display: none !important;
 }
 
 .post {

@@ -156,10 +156,6 @@ a.purple {
   display: none;
 }
 
-.mobile {
-  display: none;
-}
-
 header,
 footer {
   background: $purpur;
@@ -308,6 +304,10 @@ h6 {
   &.long {
     height: px-to-vw(160);
   }
+}
+
+.mobile {
+  display: none !important;
 }
 
 .post {
