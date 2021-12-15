@@ -505,6 +505,7 @@ main {
     background: $lightGrey;
     .container {
       padding: px-to-vw(60) 0;
+      width: 85%;
       h5 {
         font-weight: bold;
         font-size: px-to-vw(20);
@@ -908,6 +909,7 @@ main {
         }
         .tags {
           gap: px-to-vw(12);
+          max-width: 1175px;
           button {
             padding: px-to-vw(16) px-to-vw(32);
             border-radius: px-to-vw(32);
@@ -1541,6 +1543,7 @@ main {
         }
         .tags {
           gap: px-to-vw(8);
+          width: 100%;
           button {
             padding: px-to-vw(9) px-to-vw(20);
             border-radius: px-to-vw(32);
@@ -1553,10 +1556,8 @@ main {
       margin: px-to-vw(24) 0;
       .container {
         width: 80%;
-        .advertising {
-          &:not(:first-child) {
-            display: none;
-          }
+        .advertising:not(:first-child) {
+          display: none !important;
         }
       }
       & + section {

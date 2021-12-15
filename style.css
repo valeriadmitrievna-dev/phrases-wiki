@@ -664,6 +664,7 @@ main section#catalog {
 
 main section#catalog .container {
   padding: 4.16667vw 0;
+  width: 85%;
 }
 
 main section#catalog .container h5 {
@@ -1110,6 +1111,7 @@ main .slider .swiper .post {
   }
   main section#catalog .container .tags {
     gap: 12px;
+    max-width: 1175px;
   }
   main section#catalog .container .tags button {
     padding: 16px 32px;
@@ -1685,6 +1687,7 @@ main .slider .swiper .post {
   }
   main section#catalog .container .tags {
     gap: 2.13333vw;
+    width: 100%;
   }
   main section#catalog .container .tags button {
     padding: 2.4vw 5.33333vw;
@@ -1698,7 +1701,7 @@ main .slider .swiper .post {
     width: 80%;
   }
   main section.ads .container .advertising:not(:first-child) {
-    display: none;
+    display: none !important;
   }
   main section.ads + section {
     margin: 0;
