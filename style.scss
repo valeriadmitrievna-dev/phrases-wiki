@@ -920,6 +920,7 @@ main {
       margin: px-to-vw(60) 0;
       .container {
         gap: px-to-vw(32);
+        max-width: 965px;
         .advertising {
           border-radius: px-to-vw(12);
           font-size: px-to-vw(20);

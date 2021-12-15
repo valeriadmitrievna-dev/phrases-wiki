@@ -1121,6 +1121,7 @@ main .slider .swiper .post {
   }
   main section.ads .container {
     gap: 32px;
+    max-width: 965px;
   }
   main section.ads .container .advertising {
     border-radius: 12px;
