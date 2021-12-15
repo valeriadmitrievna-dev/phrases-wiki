@@ -65,6 +65,10 @@ img {
     font-family: "Rubik";
     color: #fff;
     font-size: px-to-vw(18);
+    letter-spacing: -0.03em;
+    &:first-child {
+      font-weight: 600;
+    }
   }
   img {
     width: px-to-vw(80);
@@ -82,8 +86,9 @@ img {
   justify-content: space-between;
   input {
     font-size: px-to-vw(16);
-    line-height: 162%;
+    line-height: 182%;
     flex-grow: 1;
+    padding-top: px-to-vw(4);
     &::placeholder {
       color: $greyText;
     }
@@ -115,7 +120,7 @@ a.purple {
   border: 1px solid $purpur;
   border-radius: px-to-vw(32);
   padding: px-to-vw(16) px-to-vw(32);
-  font-weight: 600;
+  font-weight: 500;
   font-size: px-to-vw(16);
   line-height: 150%;
   color: #ffffff;
@@ -137,13 +142,10 @@ header,
 footer {
   background: $purpur;
   padding: px-to-vw(10) 0;
-  background-image: url("./assets/headerpart-1.svg"),
-    url("./assets/headerpart-3.svg"), url("./assets/headerpart-4.svg"),
-    url("./assets/headerpart-2.svg");
+  background-image: url("./assets/headerbg.svg");
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-position: 0 center, px-to-vw(100) center, px-to-vw(45) center,
-    px-to-vw(400) center;
+  background-position: 0 center, px-to-vw(400) center;
   .container {
     display: flex;
     align-items: center;
@@ -179,6 +181,8 @@ footer {
         display: flex;
         align-items: center;
         gap: px-to-vw(15);
+        position: relative;
+        z-index: 5;
         cursor: pointer;
         span {
           font-size: px-to-vw(16);
@@ -202,7 +206,6 @@ footer {
         border-radius: px-to-vw(32);
         width: 100%;
         left: 0;
-        margin-top: px-to-vw(8);
         li {
           cursor: pointer;
           font-size: px-to-vw(16);
@@ -214,13 +217,13 @@ footer {
             color: $purpur;
           }
         }
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(px-to-vw(-20));
+        top: 0;
+        max-height: 100%;
+        overflow: hidden;
         &.visible {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
+          top: 100%;
+          margin-top: px-to-vw(8);
+          max-height: 100vh;
         }
       }
     }
@@ -232,15 +235,19 @@ footer {
   }
 }
 
-footer nav a {
-  text-decoration: underline;
+footer {
+  background-color: $purpur;
+  background-image: url('./assets/footerbg.svg');
+  nav a {
+    text-decoration: underline;
+  }
 }
 
 h1 {
   font-size: px-to-vw(72);
   line-height: 119%;
   margin-bottom: px-to-vw(20);
-  font-weight: bold;
+  font-weight: 700;
   font-family: "Rubik";
 }
 
@@ -257,14 +264,17 @@ main {
       padding: px-to-vw(35) 0;
       gap: px-to-vw(60);
       > img {
-        width: px-to-vw(350);
-        margin-right: px-to-vw(125);
+        width: px-to-vw(255);
+        margin-right: px-to-vw(174);
       }
       p {
         font-size: px-to-vw(18);
         line-height: 144%;
         width: px-to-vw(633);
         margin-bottom: px-to-vw(40);
+      }
+      #searchContainer {
+        width: px-to-vw(735);
       }
       .tags {
         margin-top: px-to-vw(24);
@@ -406,6 +416,9 @@ main {
 
   #logo {
     gap: px-to-vw(5);
+    p {
+      font-size: px-to-vw(18);
+    }
     img {
       width: px-to-vw(80);
       height: px-to-vw(80);
@@ -417,6 +430,7 @@ main {
     padding: px-to-vw(12) px-to-vw(24);
     input {
       font-size: px-to-vw(16);
+      padding-top: px-to-vw(4);
     }
     button {
       width: px-to-vw(18);
@@ -444,8 +458,6 @@ main {
   header,
   footer {
     padding: px-to-vw(10) 0;
-    background-position: 0 center, px-to-vw(100) center, px-to-vw(45) center,
-      px-to-vw(400) center;
     .container {
       gap: px-to-vw(40);
       nav {
@@ -478,14 +490,15 @@ main {
         #lang_body {
           padding: px-to-vw(24);
           border-radius: px-to-vw(32);
-          margin-top: px-to-vw(8);
           li {
             font-size: px-to-vw(16);
             &:not(:last-child) {
               margin-bottom: px-to-vw(12);
             }
           }
-          transform: translateY(px-to-vw(-20));
+          &.visible {
+            margin-top: px-to-vw(8);
+          }
         }
       }
       > span {
@@ -505,13 +518,16 @@ main {
         padding: px-to-vw(35) 0;
         gap: px-to-vw(60);
         > img {
-          width: px-to-vw(350);
-          margin-right: px-to-vw(125);
+          width: px-to-vw(255);
+          margin-right: px-to-vw(174);
         }
         p {
           font-size: px-to-vw(18);
           width: px-to-vw(633);
           margin-bottom: px-to-vw(40);
+        }
+        #searchContainer {
+          width: px-to-vw(735);
         }
         .tags {
           margin-top: px-to-vw(24);
@@ -672,7 +688,8 @@ main {
       .container {
         padding: px-to-vw(70) 0;
         > img {
-          margin-right: px-to-vw(100);
+          width: px-to-vw(280);
+          margin-right: px-to-vw(120);
         }
         p {
           font-size: px-to-vw(20);
@@ -840,14 +857,13 @@ main {
 
   #burger_body {
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(px-to-vw(-20));
+    transform: translateY(-100vh);
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     background: #fff;
+    z-index: 10;
     nav {
       display: block;
       padding: px-to-vw(16) px-to-vw(24);
@@ -860,8 +876,6 @@ main {
       }
     }
     &.visible {
-      opacity: 1;
-      visibility: visible;
       transform: translateY(0);
     }
   }
@@ -902,15 +916,21 @@ main {
           top: 0;
           width: 100vw;
           height: 100vh;
+          z-index: 10;
           li {
             font-size: px-to-vw(16);
             &:not(:last-child) {
               margin-bottom: px-to-vw(12);
             }
           }
-          transform: translateY(px-to-vw(-20));
+          transform: translateY(-100vh);
           ul {
             padding: px-to-vw(16) px-to-vw(24);
+          }
+          &.visible {
+            transform: translateY(0);
+            top: 0;
+            margin: 0;
           }
         }
       }
@@ -961,6 +981,9 @@ main {
           font-size: px-to-vw(16);
           width: auto;
           margin-bottom: px-to-vw(24);
+        }
+        #searchContainer {
+          width: 100%;
         }
         .tags {
           margin-top: px-to-vw(12);

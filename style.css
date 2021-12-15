@@ -61,6 +61,11 @@ img {
   font-family: "Rubik";
   color: #fff;
   font-size: 1.25vw;
+  letter-spacing: -0.03em;
+}
+
+#logo p:first-child {
+  font-weight: 600;
 }
 
 #logo img {
@@ -86,10 +91,11 @@ img {
 
 #searchContainer input {
   font-size: 1.11111vw;
-  line-height: 162%;
+  line-height: 182%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  padding-top: 0.27778vw;
 }
 
 #searchContainer input::-webkit-input-placeholder {
@@ -140,7 +146,7 @@ a.purple {
   border: 1px solid #5c44ca;
   border-radius: 2.22222vw;
   padding: 1.11111vw 2.22222vw;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.11111vw;
   line-height: 150%;
   color: #ffffff;
@@ -160,10 +166,10 @@ header,
 footer {
   background: #5c44ca;
   padding: 0.69444vw 0;
-  background-image: url("./assets/headerpart-1.svg"), url("./assets/headerpart-3.svg"), url("./assets/headerpart-4.svg"), url("./assets/headerpart-2.svg");
+  background-image: url("./assets/headerbg.svg");
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-position: 0 center, 6.94444vw center, 3.125vw center, 27.77778vw center;
+  background-position: 0 center, 27.77778vw center;
 }
 
 header .container,
@@ -235,6 +241,8 @@ footer .container #language #lang_label {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.04167vw;
+  position: relative;
+  z-index: 5;
   cursor: pointer;
 }
 
@@ -266,11 +274,9 @@ footer .container #language #lang_body {
   border-radius: 2.22222vw;
   width: 100%;
   left: 0;
-  margin-top: 0.55556vw;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-1.38889vw);
-          transform: translateY(-1.38889vw);
+  top: 0;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 header .container #language #lang_body li,
@@ -292,10 +298,9 @@ footer .container #language #lang_body li.active {
 
 header .container #language #lang_body.visible,
 footer .container #language #lang_body.visible {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  top: 100%;
+  margin-top: 0.55556vw;
+  max-height: 100vh;
 }
 
 header .container > span,
@@ -303,6 +308,11 @@ footer .container > span {
   font-size: 1.11111vw;
   line-height: 162%;
   color: #ffffff;
+}
+
+footer {
+  background-color: #5c44ca;
+  background-image: url("./assets/footerbg.svg");
 }
 
 footer nav a {
@@ -313,7 +323,7 @@ h1 {
   font-size: 5vw;
   line-height: 119%;
   margin-bottom: 1.38889vw;
-  font-weight: bold;
+  font-weight: 700;
   font-family: "Rubik";
 }
 
@@ -339,8 +349,8 @@ main section#intro .container {
 }
 
 main section#intro .container > img {
-  width: 24.30556vw;
-  margin-right: 8.68056vw;
+  width: 17.70833vw;
+  margin-right: 12.08333vw;
 }
 
 main section#intro .container p {
@@ -348,6 +358,10 @@ main section#intro .container p {
   line-height: 144%;
   width: 43.95833vw;
   margin-bottom: 2.77778vw;
+}
+
+main section#intro .container #searchContainer {
+  width: 51.04167vw;
 }
 
 main section#intro .container .tags {
@@ -523,6 +537,9 @@ main section.ads .container .advertising.long {
   #logo {
     gap: 5px;
   }
+  #logo p {
+    font-size: 18px;
+  }
   #logo img {
     width: 80px;
     height: 80px;
@@ -533,6 +550,7 @@ main section.ads .container .advertising.long {
   }
   #searchContainer input {
     font-size: 16px;
+    padding-top: 4px;
   }
   #searchContainer button {
     width: 18px;
@@ -554,7 +572,6 @@ main section.ads .container .advertising.long {
   header,
   footer {
     padding: 10px 0;
-    background-position: 0 center, 100px center, 45px center, 400px center;
   }
   header .container,
   footer .container {
@@ -597,9 +614,6 @@ main section.ads .container .advertising.long {
   footer .container #language #lang_body {
     padding: 24px;
     border-radius: 32px;
-    margin-top: 8px;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
   }
   header .container #language #lang_body li,
   footer .container #language #lang_body li {
@@ -608,6 +622,10 @@ main section.ads .container .advertising.long {
   header .container #language #lang_body li:not(:last-child),
   footer .container #language #lang_body li:not(:last-child) {
     margin-bottom: 12px;
+  }
+  header .container #language #lang_body.visible,
+  footer .container #language #lang_body.visible {
+    margin-top: 8px;
   }
   header .container > span,
   footer .container > span {
@@ -622,13 +640,16 @@ main section.ads .container .advertising.long {
     gap: 60px;
   }
   main section#intro .container > img {
-    width: 350px;
-    margin-right: 125px;
+    width: 255px;
+    margin-right: 174px;
   }
   main section#intro .container p {
     font-size: 18px;
     width: 633px;
     margin-bottom: 40px;
+  }
+  main section#intro .container #searchContainer {
+    width: 735px;
   }
   main section#intro .container .tags {
     margin-top: 24px;
@@ -764,7 +785,8 @@ main section.ads .container .advertising.long {
     padding: 4.86111vw 0;
   }
   main section#intro .container > img {
-    margin-right: 6.94444vw;
+    width: 19.44444vw;
+    margin-right: 8.33333vw;
   }
   main section#intro .container p {
     font-size: 1.38889vw;
@@ -894,15 +916,14 @@ main section.ads .container .advertising.long {
   }
   #burger_body {
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateY(-5.33333vw);
-            transform: translateY(-5.33333vw);
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     background: #fff;
+    z-index: 10;
   }
   #burger_body nav {
     display: block;
@@ -916,8 +937,6 @@ main section.ads .container .advertising.long {
     margin-bottom: 3.2vw;
   }
   #burger_body.visible {
-    opacity: 1;
-    visibility: visible;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -968,8 +987,9 @@ main section.ads .container .advertising.long {
     top: 0;
     width: 100vw;
     height: 100vh;
-    -webkit-transform: translateY(-5.33333vw);
-            transform: translateY(-5.33333vw);
+    z-index: 10;
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
   }
   header .container #language #lang_body li,
   footer .container #language #lang_body li {
@@ -982,6 +1002,13 @@ main section.ads .container .advertising.long {
   header .container #language #lang_body ul,
   footer .container #language #lang_body ul {
     padding: 4.26667vw 6.4vw;
+  }
+  header .container #language #lang_body.visible,
+  footer .container #language #lang_body.visible {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: 0;
+    margin: 0;
   }
   header .container #searchContainer,
   footer .container #searchContainer {
@@ -1026,6 +1053,9 @@ main section.ads .container .advertising.long {
     font-size: 4.26667vw;
     width: auto;
     margin-bottom: 6.4vw;
+  }
+  main section#intro .container #searchContainer {
+    width: 100%;
   }
   main section#intro .container .tags {
     margin-top: 3.2vw;
