@@ -209,6 +209,11 @@ footer .container nav a {
   line-height: 150%;
 }
 
+header .container #searchContainer,
+footer .container #searchContainer {
+  width: 26.94444vw;
+}
+
 header .container #language,
 footer .container #language {
   position: relative;
@@ -304,6 +309,14 @@ footer nav a {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 5vw;
+  line-height: 119%;
+  margin-bottom: 1.38889vw;
+  font-weight: bold;
+  font-family: "Rubik";
+}
+
 main section#intro {
   background-image: url("./assets/background.png");
   background-repeat: no-repeat;
@@ -330,14 +343,6 @@ main section#intro .container > img {
   margin-right: 8.68056vw;
 }
 
-main section#intro .container h1 {
-  font-size: 5vw;
-  line-height: 119%;
-  margin-bottom: 1.38889vw;
-  font-weight: bold;
-  font-family: "Rubik";
-}
-
 main section#intro .container p {
   font-size: 1.25vw;
   line-height: 144%;
@@ -349,8 +354,46 @@ main section#intro .container .tags {
   margin-top: 1.66667vw;
 }
 
+main section#catalog {
+  background: #f4f5f7;
+}
+
+main section#catalog .container {
+  padding: 4.16667vw 0;
+}
+
+main section#catalog .container h5 {
+  font-weight: bold;
+  font-size: 1.38889vw;
+  line-height: 140%;
+  color: #2c3341;
+  font-family: "Rubik";
+  margin-bottom: 1.11111vw;
+}
+
+main section#catalog .container .tags {
+  gap: 0.83333vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main section#catalog .container .tags button {
+  padding: 1.11111vw 2.22222vw;
+  border-radius: 2.22222vw;
+  background-color: #fff;
+  font-size: 1.11111vw;
+  line-height: 150%;
+  color: #2c3341;
+}
+
+main section#catalog .container .tags button.active {
+  color: #fff;
+  background-color: #5c44ca;
+  font-weight: 600;
+}
+
 main section.posts {
-  margin: 5.55556vw 0;
+  margin: 4.16667vw 0;
 }
 
 main section.posts .container h2 {
@@ -427,6 +470,50 @@ main section.posts .container .postsGrid .post .content p {
 
 main section.posts .container .purple {
   margin-top: 2.77778vw;
+}
+
+main section.ads {
+  margin: 4.16667vw 0;
+}
+
+main section.ads .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.22222vw;
+  width: 67%;
+}
+
+main section.ads .container .advertising {
+  background-color: #f4f5f7;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.83333vw;
+  color: #afb7c5;
+  font-weight: bold;
+  font-size: 1.38889vw;
+  line-height: 140%;
+  height: 17.36111vw;
+}
+
+main section.ads .container .advertising.long {
+  height: 11.11111vw;
 }
 
 @media (min-width: 1920px) {
@@ -522,6 +609,10 @@ main section.posts .container .purple {
   footer .container > span {
     font-size: 16px;
   }
+  h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+  }
   main section#intro .container {
     padding: 35px 0;
     gap: 60px;
@@ -529,10 +620,6 @@ main section.posts .container .purple {
   main section#intro .container > img {
     width: 350px;
     margin-right: 125px;
-  }
-  main section#intro .container h1 {
-    font-size: 72px;
-    margin-bottom: 20px;
   }
   main section#intro .container p {
     font-size: 18px;
@@ -543,7 +630,7 @@ main section.posts .container .purple {
     margin-top: 24px;
   }
   main section.posts {
-    margin: 80px 0;
+    margin: 60px 0;
   }
   main section.posts .container h2 {
     font-size: 56px;
@@ -637,14 +724,14 @@ main section.posts .container .purple {
   footer .container > span {
     font-size: 1.38889vw;
   }
+  h1 {
+    font-size: 5.55556vw;
+  }
   main section#intro .container {
     padding: 4.86111vw 0;
   }
   main section#intro .container > img {
     margin-right: 6.94444vw;
-  }
-  main section#intro .container h1 {
-    font-size: 5.55556vw;
   }
   main section#intro .container p {
     font-size: 1.38889vw;
@@ -860,6 +947,10 @@ main section.posts .container .purple {
   footer .container nav a:not(:last-child) {
     margin-bottom: 4.26667vw;
   }
+  h1 {
+    font-size: 10.66667vw;
+    margin-bottom: 3.2vw;
+  }
   main section#intro {
     background: #f4f5f7;
   }
@@ -869,10 +960,6 @@ main section.posts .container .purple {
   }
   main section#intro .container > img {
     display: none;
-  }
-  main section#intro .container h1 {
-    font-size: 10.66667vw;
-    margin-bottom: 3.2vw;
   }
   main section#intro .container p {
     font-size: 4.26667vw;
