@@ -271,37 +271,6 @@ main {
       }
     }
   }
-  section#catalog {
-    background: $lightGrey;
-    .container {
-      padding: px-to-vw(60) 0;
-      h5 {
-        font-weight: bold;
-        font-size: px-to-vw(20);
-        line-height: 140%;
-        color: $textColor;
-        font-family: "Rubik";
-        margin-bottom: px-to-vw(16);
-      }
-      .tags {
-        gap: px-to-vw(12);
-        flex-wrap: wrap;
-        button {
-          padding: px-to-vw(16) px-to-vw(32);
-          border-radius: px-to-vw(32);
-          background-color: #fff;
-          font-size: px-to-vw(16);
-          line-height: 150%;
-          color: $textColor;
-          &.active {
-            color: #fff;
-            background-color: $purpur;
-            font-weight: 600;
-          }
-        }
-      }
-    }
-  }
   section.posts {
     margin: px-to-vw(60) 0;
     .container {
@@ -365,6 +334,37 @@ main {
       }
       .purple {
         margin-top: px-to-vw(40);
+      }
+    }
+  }
+  section#catalog {
+    background: $lightGrey;
+    .container {
+      padding: px-to-vw(60) 0;
+      h5 {
+        font-weight: bold;
+        font-size: px-to-vw(20);
+        line-height: 140%;
+        color: $textColor;
+        font-family: "Rubik";
+        margin-bottom: px-to-vw(16);
+      }
+      .tags {
+        gap: px-to-vw(12);
+        flex-wrap: wrap;
+        button {
+          padding: px-to-vw(16) px-to-vw(32);
+          border-radius: px-to-vw(32);
+          background-color: #fff;
+          font-size: px-to-vw(16);
+          line-height: 150%;
+          color: $textColor;
+          &.active {
+            color: #fff;
+            background-color: $purpur;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
@@ -453,6 +453,9 @@ main {
         a {
           font-size: px-to-vw(16);
         }
+      }
+      #searchContainer {
+        width: px-to-vw(388);
       }
       #language {
         #lang_label {
@@ -549,6 +552,37 @@ main {
         }
         .purple {
           margin-top: px-to-vw(40);
+        }
+      }
+    }
+    section#catalog {
+      .container {
+        padding: px-to-vw(60) 0;
+        h5 {
+          font-size: px-to-vw(20);
+          margin-bottom: px-to-vw(16);
+        }
+        .tags {
+          gap: px-to-vw(12);
+          button {
+            padding: px-to-vw(16) px-to-vw(32);
+            border-radius: px-to-vw(32);
+            font-size: px-to-vw(16);
+          }
+        }
+      }
+    }
+    section.ads {
+      margin: px-to-vw(60) 0;
+      .container {
+        gap: px-to-vw(32);
+        .advertising {
+          border-radius: px-to-vw(12);
+          font-size: px-to-vw(20);
+          height: px-to-vw(250);
+          &.long {
+            height: px-to-vw(160);
+          }
         }
       }
     }
@@ -672,6 +706,34 @@ main {
                 font-size: px-to-vw(20);
               }
             }
+          }
+        }
+      }
+    }
+    section#catalog {
+      .container {
+        h5 {
+          font-size: px-to-vw(24);
+        }
+        .tags {
+          gap: px-to-vw(14);
+          button {
+            padding: px-to-vw(18) px-to-vw(34);
+            border-radius: px-to-vw(32);
+            font-size: px-to-vw(18);
+          }
+        }
+      }
+    }
+    section.ads {
+      .container {
+        width: 80%;
+        .advertising {
+          border-radius: px-to-vw(12);
+          font-size: px-to-vw(24);
+          height: px-to-vw(270);
+          &.long {
+            height: px-to-vw(180);
           }
         }
       }
@@ -852,6 +914,11 @@ main {
           }
         }
       }
+      #searchContainer {
+        position: absolute;
+        width: 91%;
+        top: px-to-vw(80);
+      }
       > span {
         font-size: px-to-vw(16);
       }
@@ -937,6 +1004,44 @@ main {
         .purple {
           margin-top: px-to-vw(16);
         }
+      }
+    }
+    section#catalog {
+      .container {
+        padding-top: px-to-vw(88);
+        padding-bottom: px-to-vw(24);
+        h5 {
+          font-size: px-to-vw(20);
+          margin-bottom: px-to-vw(16);
+        }
+        .tags {
+          gap: px-to-vw(8);
+          button {
+            padding: px-to-vw(9) px-to-vw(20);
+            border-radius: px-to-vw(32);
+            font-size: px-to-vw(14);
+          }
+        }
+      }
+    }
+    section.ads {
+      margin: px-to-vw(24) 0;
+      .container {
+        width: 80%;
+        .advertising {
+          border-radius: px-to-vw(12);
+          font-size: px-to-vw(20);
+          height: px-to-vw(250);
+          &.long {
+            height: px-to-vw(160);
+          }
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+      & + section {
+        margin: 0;
       }
     }
   }

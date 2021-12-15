@@ -354,44 +354,6 @@ main section#intro .container .tags {
   margin-top: 1.66667vw;
 }
 
-main section#catalog {
-  background: #f4f5f7;
-}
-
-main section#catalog .container {
-  padding: 4.16667vw 0;
-}
-
-main section#catalog .container h5 {
-  font-weight: bold;
-  font-size: 1.38889vw;
-  line-height: 140%;
-  color: #2c3341;
-  font-family: "Rubik";
-  margin-bottom: 1.11111vw;
-}
-
-main section#catalog .container .tags {
-  gap: 0.83333vw;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main section#catalog .container .tags button {
-  padding: 1.11111vw 2.22222vw;
-  border-radius: 2.22222vw;
-  background-color: #fff;
-  font-size: 1.11111vw;
-  line-height: 150%;
-  color: #2c3341;
-}
-
-main section#catalog .container .tags button.active {
-  color: #fff;
-  background-color: #5c44ca;
-  font-weight: 600;
-}
-
 main section.posts {
   margin: 4.16667vw 0;
 }
@@ -470,6 +432,44 @@ main section.posts .container .postsGrid .post .content p {
 
 main section.posts .container .purple {
   margin-top: 2.77778vw;
+}
+
+main section#catalog {
+  background: #f4f5f7;
+}
+
+main section#catalog .container {
+  padding: 4.16667vw 0;
+}
+
+main section#catalog .container h5 {
+  font-weight: bold;
+  font-size: 1.38889vw;
+  line-height: 140%;
+  color: #2c3341;
+  font-family: "Rubik";
+  margin-bottom: 1.11111vw;
+}
+
+main section#catalog .container .tags {
+  gap: 0.83333vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main section#catalog .container .tags button {
+  padding: 1.11111vw 2.22222vw;
+  border-radius: 2.22222vw;
+  background-color: #fff;
+  font-size: 1.11111vw;
+  line-height: 150%;
+  color: #2c3341;
+}
+
+main section#catalog .container .tags button.active {
+  color: #fff;
+  background-color: #5c44ca;
+  font-weight: 600;
 }
 
 main section.ads {
@@ -568,6 +568,10 @@ main section.ads .container .advertising.long {
   footer .container nav a {
     font-size: 16px;
   }
+  header .container #searchContainer,
+  footer .container #searchContainer {
+    width: 388px;
+  }
   header .container #language #lang_label,
   footer .container #language #lang_label {
     border-radius: 32px;
@@ -664,6 +668,35 @@ main section.ads .container .advertising.long {
   main section.posts .container .purple {
     margin-top: 40px;
   }
+  main section#catalog .container {
+    padding: 60px 0;
+  }
+  main section#catalog .container h5 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  main section#catalog .container .tags {
+    gap: 12px;
+  }
+  main section#catalog .container .tags button {
+    padding: 16px 32px;
+    border-radius: 32px;
+    font-size: 16px;
+  }
+  main section.ads {
+    margin: 60px 0;
+  }
+  main section.ads .container {
+    gap: 32px;
+  }
+  main section.ads .container .advertising {
+    border-radius: 12px;
+    font-size: 20px;
+    height: 250px;
+  }
+  main section.ads .container .advertising.long {
+    height: 160px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -754,6 +787,28 @@ main section.ads .container .advertising.long {
   }
   main section.posts .container .postsGrid .post .content p {
     font-size: 1.38889vw;
+  }
+  main section#catalog .container h5 {
+    font-size: 1.66667vw;
+  }
+  main section#catalog .container .tags {
+    gap: 0.97222vw;
+  }
+  main section#catalog .container .tags button {
+    padding: 1.25vw 2.36111vw;
+    border-radius: 2.22222vw;
+    font-size: 1.25vw;
+  }
+  main section.ads .container {
+    width: 80%;
+  }
+  main section.ads .container .advertising {
+    border-radius: 0.83333vw;
+    font-size: 1.66667vw;
+    height: 18.75vw;
+  }
+  main section.ads .container .advertising.long {
+    height: 12.5vw;
   }
 }
 
@@ -928,6 +983,12 @@ main section.ads .container .advertising.long {
   footer .container #language #lang_body ul {
     padding: 4.26667vw 6.4vw;
   }
+  header .container #searchContainer,
+  footer .container #searchContainer {
+    position: absolute;
+    width: 91%;
+    top: 21.33333vw;
+  }
   header .container > span,
   footer .container > span {
     font-size: 4.26667vw;
@@ -1006,6 +1067,42 @@ main section.ads .container .advertising.long {
   }
   main section.posts .container .purple {
     margin-top: 4.26667vw;
+  }
+  main section#catalog .container {
+    padding-top: 23.46667vw;
+    padding-bottom: 6.4vw;
+  }
+  main section#catalog .container h5 {
+    font-size: 5.33333vw;
+    margin-bottom: 4.26667vw;
+  }
+  main section#catalog .container .tags {
+    gap: 2.13333vw;
+  }
+  main section#catalog .container .tags button {
+    padding: 2.4vw 5.33333vw;
+    border-radius: 8.53333vw;
+    font-size: 3.73333vw;
+  }
+  main section.ads {
+    margin: 6.4vw 0;
+  }
+  main section.ads .container {
+    width: 80%;
+  }
+  main section.ads .container .advertising {
+    border-radius: 3.2vw;
+    font-size: 5.33333vw;
+    height: 66.66667vw;
+  }
+  main section.ads .container .advertising.long {
+    height: 42.66667vw;
+  }
+  main section.ads .container .advertising:not(:first-child) {
+    display: none;
+  }
+  main section.ads + section {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
