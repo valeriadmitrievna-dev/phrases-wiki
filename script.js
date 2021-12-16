@@ -123,3 +123,15 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+// search page
+
+const search = document.getElementById("searchContainer");
+const searchInput = search[0];
+const tags = [...document.querySelectorAll(".search .tags span")];
+
+tags.forEach(tag => {
+  tag.addEventListener("click", e => {
+    searchInput.value = e.target.innerText;
+  });
+});

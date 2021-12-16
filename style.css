@@ -592,6 +592,16 @@ h6 {
   border-radius: 2.22222vw;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 main section#intro {
   background-image: url("./assets/background.png");
   background-repeat: no-repeat;
@@ -826,6 +836,34 @@ main section#post .container .body .side .menu nav a {
 main section#post .container .body .side .menu nav a span {
   color: #afb7c5;
   margin-left: 1ch;
+}
+
+main section.search {
+  background: #f4f5f7;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 5.55556vw;
+  padding-bottom: 2.77778vw;
+}
+
+main section.search h1 {
+  margin-bottom: 2.22222vw;
+}
+
+main section.search .tags {
+  margin-top: 1.66667vw;
+}
+
+main section.search .tags span {
+  cursor: pointer;
+}
+
+main section.search p {
+  margin-top: 3.05556vw;
+  font-size: 1.11111vw;
+  line-height: 162%;
+  color: #000;
 }
 
 main .slider {
@@ -1210,6 +1248,20 @@ main .slider .swiper .post {
   }
   main .slider .swiper .post {
     width: 355px;
+  }
+  main section.search {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  main section.search h1 {
+    margin-bottom: 32px;
+  }
+  main section.search .tags {
+    margin-top: 24px;
+  }
+  main section.search p {
+    margin-top: 44px;
+    font-size: 16px;
   }
 }
 
@@ -1801,6 +1853,20 @@ main .slider .swiper .post {
   }
   main .slider .comments_column {
     gap: 3.2vw;
+  }
+  main section.search {
+    padding: 10.66667vw 0;
+  }
+  main section.search h1 {
+    margin-bottom: 6.4vw;
+  }
+  main section.search .tags {
+    margin-top: 3.2vw;
+  }
+  main section.search p {
+    margin-top: 5.6vw;
+    font-size: 4.26667vw;
+    margin-bottom: 42.66667vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
