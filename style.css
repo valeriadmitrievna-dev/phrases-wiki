@@ -1068,6 +1068,28 @@ main .slider .swiper .post {
   visibility: visible;
 }
 
+.successCopy {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -100vh;
+  background: #d0f7df;
+  color: #2da35c;
+  font-weight: 600;
+  padding: 1.11111vw;
+  border-radius: 0.55556vw;
+  -webkit-box-shadow: 0 0.34722vw 0.69444vw 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.34722vw 0.69444vw 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 27.77778vw;
+  text-align: center;
+}
+
+.successCopy.active {
+  top: 1.66667vw;
+}
+
 @media (min-width: 1920px) {
   .container {
     max-width: 1320px;

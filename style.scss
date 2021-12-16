@@ -794,6 +794,24 @@ main {
     visibility: visible;
   }
 }
+.successCopy {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100vh;
+  background: #d0f7df;
+  color: #2da35c;
+  font-weight: 600;
+  padding: px-to-vw(16);
+  border-radius: px-to-vw(8);
+  box-shadow: 0 px-to-vw(5) px-to-vw(10) 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: px-to-vw(400);
+  text-align: center;
+  &.active {
+    top: px-to-vw(24);
+  }
+}
 
 @media (min-width: 1920px) {
   @function px-to-vw($value) {

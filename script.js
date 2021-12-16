@@ -193,3 +193,27 @@ const fakeFetch = element => {
   showThanksMessage();
   setTimeout(hideThanksMessage, 2000);
 };
+
+// copy
+
+const toCopy = [...document.querySelectorAll(".copy")];
+
+const copied = document.querySelector(".successCopy");
+
+const successCopy = () => {
+  copied.classList.remove("active");
+  copied.style.transition = "all 250ms ease-out";
+  copied.classList.add("active");
+  setTimeout(() => {
+    copied.classList.remove("active");
+  }, 2000);
+};
+
+toCopy.forEach(button => {
+  button.addEventListener("click", e => {
+    const text = e.path[3].querySelector(".title").innerText;
+    navigator.clipboard.writeText(text).then(successCopy, () => {
+      console.log("copy failed");
+    });
+  });
+});
