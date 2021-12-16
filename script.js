@@ -135,3 +135,61 @@ tags.forEach(tag => {
     searchInput.value = e.target.innerText;
   });
 });
+
+// modal
+
+const modalButtons = [...document.querySelectorAll(".open-modal")];
+const modal = document.querySelector(".modal");
+
+const showModal = () => {
+  modal.style.transition = "all 250ms ease-out";
+  modal.classList.add("visible");
+  controlScroll(true);
+};
+const closeModal = () => {
+  modal.style.transition = "all 250ms ease-out";
+  modal.classList.remove("visible");
+  controlScroll(false);
+};
+
+modalButtons.forEach(button => {
+  button.addEventListener("click", showModal);
+});
+
+modal.addEventListener("click", e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+
+// send suggesting
+
+const thanksMessage = document.querySelector(".thanksMessage");
+
+const showThanksMessage = () => {
+  thanksMessage.style.transition = "all 250ms ease-out";
+  thanksMessage.classList.add("visible");
+  controlScroll(true);
+};
+
+const hideThanksMessage = () => {
+  thanksMessage.style.transition = "all 250ms ease-out";
+  thanksMessage.classList.remove("visible");
+  controlScroll(false);
+};
+
+modal.querySelector("button").onclick = e => {
+  e.preventDefault();
+  const text = e.path[1][0].value;
+  if (text.length > 0) {
+    e.target.classList.add("loading");
+    setTimeout(() => fakeFetch(e.target), 1500);
+    e.path[1][0].value = "";
+  }
+};
+
+const fakeFetch = element => {
+  element.classList.remove("loading");
+  closeModal();
+  console.log("loaded");
+  showThanksMessage();
+  setTimeout(hideThanksMessage, 2000);
+};

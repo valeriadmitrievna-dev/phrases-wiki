@@ -686,6 +686,115 @@ main {
   }
 }
 
+@keyframes sizein {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form {
+    background: #fff;
+    padding: px-to-vw(12) px-to-vw(24);
+    border-radius: px-to-vw(16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: px-to-vw(300);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    p {
+      text-align: center;
+      font-weight: 600;
+      font-family: "Rubik";
+      margin-bottom: px-to-vw(14);
+      font-size: px-to-vw(16);
+    }
+    textarea {
+      border: 1px solid $greyText;
+      border-radius: px-to-vw(8);
+      width: 100%;
+      resize: none;
+      height: px-to-vw(160);
+      font-size: px-to-vw(14);
+      padding: px-to-vw(8);
+    }
+    button {
+      font-size: px-to-vw(16);
+      padding: px-to-vw(8) px-to-vw(32);
+      border-radius: px-to-vw(16);
+      margin-top: px-to-vw(12);
+      position: relative;
+      &.loading::after {
+        position: absolute;
+        content: "";
+        right: px-to-vw(-24);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $purpur;
+        top: calc((100% - 8px) / 2);
+        animation: sizein 1s linear infinite;
+        opacity: 0.7;
+      }
+    }
+  }
+  opacity: 0;
+  visibility: hidden;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.thanksMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    background: #fff;
+    padding: px-to-vw(24);
+    border-radius: px-to-vw(16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: px-to-vw(400);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    font-size: px-to-vw(18);
+    text-align: center;
+    font-family: "Rubik";
+    font-weight: bold;
+  }
+  opacity: 0;
+  visibility: hidden;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @media (min-width: 1920px) {
   @function px-to-vw($value) {
     @return $value + px;

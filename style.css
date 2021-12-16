@@ -910,6 +910,164 @@ main .slider .swiper .post {
   width: 24.65278vw;
 }
 
+@-webkit-keyframes sizein {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes sizein {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal form {
+  background: #fff;
+  padding: 0.83333vw 1.66667vw;
+  border-radius: 1.11111vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 20.83333vw;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.modal form p {
+  text-align: center;
+  font-weight: 600;
+  font-family: "Rubik";
+  margin-bottom: 0.97222vw;
+  font-size: 1.11111vw;
+}
+
+.modal form textarea {
+  border: 1px solid #afb7c5;
+  border-radius: 0.55556vw;
+  width: 100%;
+  resize: none;
+  height: 11.11111vw;
+  font-size: 0.97222vw;
+  padding: 0.55556vw;
+}
+
+.modal form button {
+  font-size: 1.11111vw;
+  padding: 0.55556vw 2.22222vw;
+  border-radius: 1.11111vw;
+  margin-top: 0.83333vw;
+  position: relative;
+}
+
+.modal form button.loading::after {
+  position: absolute;
+  content: "";
+  right: -1.66667vw;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5c44ca;
+  top: calc((100% - 8px) / 2);
+  -webkit-animation: sizein 1s linear infinite;
+          animation: sizein 1s linear infinite;
+  opacity: 0.7;
+}
+
+.modal.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thanksMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.thanksMessage p {
+  background: #fff;
+  padding: 1.66667vw;
+  border-radius: 1.11111vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 27.77778vw;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  font-size: 1.25vw;
+  text-align: center;
+  font-family: "Rubik";
+  font-weight: bold;
+}
+
+.thanksMessage.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (min-width: 1920px) {
   .container {
     max-width: 1320px;
