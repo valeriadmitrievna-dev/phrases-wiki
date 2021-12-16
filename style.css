@@ -751,7 +751,7 @@ main section#post .container .body .content h2 {
 }
 
 main section#post .container .body .content p {
-  width: 92%;
+  width: 90%;
   color: #2c3341;
   font-size: 1.25vw;
   line-height: 167%;
@@ -767,7 +767,7 @@ main section#post .container .body .content hr {
 }
 
 main section#post .container .body .content h3 {
-  width: 85%;
+  width: 80%;
   margin-bottom: 2.77778vw;
 }
 
@@ -1152,6 +1152,7 @@ main .slider .swiper .post {
   }
   main section#post .container .body .content p {
     font-size: 18px;
+    max-width: 731px;
   }
   main section#post .container .body .content hr {
     width: 275px;
@@ -1160,6 +1161,7 @@ main .slider .swiper .post {
   }
   main section#post .container .body .content h3 {
     margin-bottom: 40px;
+    max-width: 650px;
   }
   main section#post .container .body .content .purple {
     margin-bottom: 40px;
@@ -1327,7 +1329,7 @@ main .slider .swiper .post {
 
 @media (max-width: 640px) {
   .mobile {
-    display: block;
+    display: block !important;
   }
   .container {
     width: 91%;
@@ -1435,6 +1437,7 @@ main .slider .swiper .post {
     padding: 4.26667vw 6.4vw;
   }
   #burger_body nav a {
+    display: block;
     color: #2c3341;
     font-size: 4.26667vw;
   }
@@ -1563,6 +1566,11 @@ main .slider .swiper .post {
   .advertising.long {
     height: 42.66667vw;
     width: 100%;
+  }
+  body .advertising:not(.desktop) {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .comments {
     margin-top: 4.26667vw;

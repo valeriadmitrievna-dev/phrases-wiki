@@ -570,7 +570,7 @@ main {
             margin-bottom: px-to-vw(40);
           }
           p {
-            width: 92%;
+            width: 90%;
             color: $textColor;
             font-size: px-to-vw(18);
             line-height: 167%;
@@ -584,7 +584,7 @@ main {
             height: 1px;
           }
           h3 {
-            width: 85%;
+            width: 80%;
             margin-bottom: px-to-vw(40);
           }
           .purple {
@@ -953,6 +953,7 @@ main {
             }
             p {
               font-size: px-to-vw(18);
+              max-width: 731px;
             }
             hr {
               width: px-to-vw(275);
@@ -961,6 +962,7 @@ main {
             }
             h3 {
               margin-bottom: px-to-vw(40);
+              max-width: 650px;
             }
             .purple {
               margin-bottom: px-to-vw(40);
@@ -1175,7 +1177,7 @@ main {
   }
 
   .mobile {
-    display: block;
+    display: block !important;
   }
 
   .container {
@@ -1295,6 +1297,7 @@ main {
       display: block;
       padding: px-to-vw(16) px-to-vw(24);
       a {
+        display: block;
         color: $textColor;
         font-size: px-to-vw(16);
         &:not(:last-child) {
@@ -1415,6 +1418,10 @@ main {
       width: 100%;
     }
   }
+  body .advertising:not(.desktop) {
+    display: flex !important;
+  }
+
   .comments {
     margin-top: px-to-vw(16);
     margin-bottom: 0;
