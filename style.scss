@@ -885,6 +885,50 @@ main {
     }
   }
 
+  .modal {
+    form {
+      padding: px-to-vw(12) px-to-vw(24);
+      border-radius: px-to-vw(16);
+      max-width: px-to-vw(300);
+      p {
+        margin-bottom: px-to-vw(14);
+        font-size: px-to-vw(16);
+      }
+      textarea {
+        border-radius: px-to-vw(8);
+        height: px-to-vw(160);
+        font-size: px-to-vw(14);
+        padding: px-to-vw(8);
+      }
+      button {
+        font-size: px-to-vw(16);
+        padding: px-to-vw(8) px-to-vw(32);
+        border-radius: px-to-vw(16);
+        margin-top: px-to-vw(12);
+        &.loading::after {
+          right: px-to-vw(-24);
+        }
+      }
+    }
+  }
+  .thanksMessage {
+    p {
+      padding: px-to-vw(24);
+      border-radius: px-to-vw(16);
+      max-width: px-to-vw(400);
+      font-size: px-to-vw(18);
+    }
+  }
+  .successCopy {
+    padding: px-to-vw(16);
+    border-radius: px-to-vw(8);
+    box-shadow: 0 px-to-vw(5) px-to-vw(10) 0 rgba(0, 0, 0, 0.1);
+    max-width: px-to-vw(400);
+    &.active {
+      top: px-to-vw(24);
+    }
+  }
+
   // header
 
   header,
@@ -1410,6 +1454,53 @@ main {
     font-size: px-to-vw(16);
     max-width: none;
     width: 100%;
+  }
+
+  .modal {
+    form {
+      padding: px-to-vw(12) px-to-vw(24);
+      border-radius: px-to-vw(16);
+      max-width: calc(100% - (4.26667vw * 2));
+      p {
+        margin-bottom: px-to-vw(14);
+        font-size: px-to-vw(16);
+      }
+      textarea {
+        border-radius: px-to-vw(8);
+        height: px-to-vw(160);
+        font-size: px-to-vw(14);
+        padding: px-to-vw(8);
+      }
+      button {
+        font-size: px-to-vw(16);
+        padding: px-to-vw(8) px-to-vw(32);
+        border-radius: px-to-vw(16);
+        margin-top: px-to-vw(12);
+        width: 80%;
+        &.loading::after {
+          right: px-to-vw(-24);
+        }
+      }
+    }
+  }
+  .thanksMessage {
+    p {
+      padding: px-to-vw(24);
+      border-radius: px-to-vw(16);
+      max-width: none;
+      font-size: px-to-vw(18);
+      width: calc(100% - (4.26667vw * 2));
+    }
+  }
+  .successCopy {
+    padding: px-to-vw(16);
+    border-radius: px-to-vw(8);
+    box-shadow: 0 px-to-vw(5) px-to-vw(10) 0 rgba(0, 0, 0, 0.1);
+    max-width: none;
+    width: calc(100% - (4.26667vw * 2));
+    &.active {
+      top: px-to-vw(24);
+    }
   }
 
   // header

@@ -1153,6 +1153,46 @@ main .slider .swiper .post {
   .post .content p {
     font-size: 16px;
   }
+  .modal form {
+    padding: 12px 24px;
+    border-radius: 16px;
+    max-width: 300px;
+  }
+  .modal form p {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  .modal form textarea {
+    border-radius: 8px;
+    height: 160px;
+    font-size: 14px;
+    padding: 8px;
+  }
+  .modal form button {
+    font-size: 16px;
+    padding: 8px 32px;
+    border-radius: 16px;
+    margin-top: 12px;
+  }
+  .modal form button.loading::after {
+    right: -24px;
+  }
+  .thanksMessage p {
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 400px;
+    font-size: 18px;
+  }
+  .successCopy {
+    padding: 16px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  .successCopy.active {
+    top: 24px;
+  }
   header,
   footer {
     padding: 10px 0;
@@ -1623,6 +1663,49 @@ main .slider .swiper .post {
     font-size: 4.26667vw;
     max-width: none;
     width: 100%;
+  }
+  .modal form {
+    padding: 3.2vw 6.4vw;
+    border-radius: 4.26667vw;
+    max-width: calc(100% - (4.26667vw * 2));
+  }
+  .modal form p {
+    margin-bottom: 3.73333vw;
+    font-size: 4.26667vw;
+  }
+  .modal form textarea {
+    border-radius: 2.13333vw;
+    height: 42.66667vw;
+    font-size: 3.73333vw;
+    padding: 2.13333vw;
+  }
+  .modal form button {
+    font-size: 4.26667vw;
+    padding: 2.13333vw 8.53333vw;
+    border-radius: 4.26667vw;
+    margin-top: 3.2vw;
+    width: 80%;
+  }
+  .modal form button.loading::after {
+    right: -6.4vw;
+  }
+  .thanksMessage p {
+    padding: 6.4vw;
+    border-radius: 4.26667vw;
+    max-width: none;
+    font-size: 4.8vw;
+    width: calc(100% - (4.26667vw * 2));
+  }
+  .successCopy {
+    padding: 4.26667vw;
+    border-radius: 2.13333vw;
+    -webkit-box-shadow: 0 1.33333vw 2.66667vw 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1.33333vw 2.66667vw 0 rgba(0, 0, 0, 0.1);
+    max-width: none;
+    width: calc(100% - (4.26667vw * 2));
+  }
+  .successCopy.active {
+    top: 6.4vw;
   }
   #burger_body,
   #burger {
