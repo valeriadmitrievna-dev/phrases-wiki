@@ -164,6 +164,10 @@ img {
   color: #5c44ca;
 }
 
+.tags span {
+  cursor: pointer;
+}
+
 button.purple,
 a.purple {
   background: #5c44ca;

@@ -95,10 +95,10 @@ collapsed_comments.forEach(container => {
     container.style.transition = "500ms ease";
     if (container.style.maxHeight === initialHeight) {
       container.style.maxHeight = newHeight;
-      container.nextElementSibling.innerText = 'Show less'
+      container.nextElementSibling.innerText = "Show less";
     } else {
       container.style.maxHeight = initialHeight;
-      container.nextElementSibling.innerText = 'Show more'
+      container.nextElementSibling.innerText = "Show more";
     }
   };
 });
@@ -128,11 +128,13 @@ const swiper = new Swiper(".swiper", {
 
 // tags click
 
-const search = document.getElementById("searchContainer");
+const search =
+  document.querySelector("#intro #searchContainer") ||
+  document.querySelector(".search #searchContainer");
 const searchInput = search[0];
-const tags = [...document.querySelectorAll(".search .tags span")];
+const tags = search?.nextElementSibling?.children;
 
-tags.forEach(tag => {
+[...tags].forEach(tag => {
   tag.addEventListener("click", e => {
     searchInput.value = e.target.innerText;
   });
