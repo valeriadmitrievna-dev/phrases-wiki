@@ -131,14 +131,16 @@ const swiper = new Swiper(".swiper", {
 const search =
   document.querySelector("#intro #searchContainer") ||
   document.querySelector(".search #searchContainer");
-const searchInput = search[0];
-const tags = search?.nextElementSibling?.children;
+if (!!search) {
+  const searchInput = search[0];
+  const tags = search?.nextElementSibling?.children;
 
-[...tags].forEach(tag => {
-  tag.addEventListener("click", e => {
-    searchInput.value = e.target.innerText;
+  [...tags].forEach(tag => {
+    tag.addEventListener("click", e => {
+      searchInput.value = e.target.innerText;
+    });
   });
-});
+}
 
 // modal
 
@@ -229,7 +231,6 @@ const catalogTags = document.querySelectorAll("#catalog .tags button");
 const chosen = [];
 catalogTags.forEach(tag => {
   tag.onclick = () => {
-    console.log(chosen.length);
     if (chosen.length < 3) {
       chosen.push(tag);
     } else {
