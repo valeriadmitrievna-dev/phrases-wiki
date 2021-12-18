@@ -124,7 +124,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// search page
+// tags click
 
 const search = document.getElementById("searchContainer");
 const searchInput = search[0];
@@ -156,7 +156,7 @@ modalButtons.forEach(button => {
   button.addEventListener("click", showModal);
 });
 
-modal.addEventListener("click", e => {
+modal?.addEventListener("click", e => {
   if (e.target === e.currentTarget) closeModal();
 });
 
@@ -176,7 +176,7 @@ const hideThanksMessage = () => {
   controlScroll(false);
 };
 
-modal.querySelector("button").onclick = e => {
+modal?.querySelector("button").addEventListener("click", e => {
   e.preventDefault();
   const text = e.path[1][0].value;
   if (text.length > 0) {
@@ -184,7 +184,7 @@ modal.querySelector("button").onclick = e => {
     setTimeout(() => fakeFetch(e.target), 1500);
     e.path[1][0].value = "";
   }
-};
+});
 
 const fakeFetch = element => {
   element.classList.remove("loading");
@@ -216,4 +216,27 @@ toCopy.forEach(button => {
       console.log("copy failed");
     });
   });
+});
+
+// catalog tags
+
+const catalogTags = document.querySelectorAll("#catalog .tags button");
+
+const chosen = [];
+catalogTags.forEach(tag => {
+  tag.onclick = () => {
+    console.log(chosen.length);
+    if (chosen.length < 3) {
+      chosen.push(tag);
+    } else {
+      chosen.shift();
+      chosen.push(tag);
+    }
+    catalogTags.forEach(el => {
+      el.classList.remove('active')
+      if (chosen.includes(el)) {
+        el.classList.add('active')
+      }
+    })
+  };
 });
