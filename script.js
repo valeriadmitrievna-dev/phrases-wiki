@@ -95,8 +95,10 @@ collapsed_comments.forEach(container => {
     container.style.transition = "500ms ease";
     if (container.style.maxHeight === initialHeight) {
       container.style.maxHeight = newHeight;
+      container.nextElementSibling.innerText = 'Show less'
     } else {
       container.style.maxHeight = initialHeight;
+      container.nextElementSibling.innerText = 'Show more'
     }
   };
 });
@@ -233,10 +235,10 @@ catalogTags.forEach(tag => {
       chosen.push(tag);
     }
     catalogTags.forEach(el => {
-      el.classList.remove('active')
+      el.classList.remove("active");
       if (chosen.includes(el)) {
-        el.classList.add('active')
+        el.classList.add("active");
       }
-    })
+    });
   };
 });
