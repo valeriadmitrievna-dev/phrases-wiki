@@ -118,7 +118,6 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-top: 0.27778vw;
 }
 
 #searchContainer input::-webkit-input-placeholder {
